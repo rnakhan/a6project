@@ -32,12 +32,9 @@ public class WorldAnchorPane {
     return r;
   }
 
-  public AnchorPane createWorldAnchorPane() {
+  public AnchorPane createWorldAnchorPane(int minHexPerRow, int maxHexPerRow) {
 
     AnchorPane tileMap = new AnchorPane();
-
-    int minHexPerRow = 4;
-    int maxHexPerRow = 7;
     int totalRows = (maxHexPerRow - minHexPerRow) * 2 + 1;
     int xStartOffset = 40; // offsets the entire field to the right
     int yStartOffset = 40; // offsets the entire fiels downwards
