@@ -60,11 +60,9 @@ public class A6WorldController {
     }
 
     WorldAnchorPane worldAnchorPane;
-    AnchorPane tileMap;
     HashMap<Point, Polygon> hexHashMap;
 
     @FXML
-
     public void initialize() {
         worldAnchorPane = new WorldAnchorPane();
         regenerateTileMap();
@@ -72,16 +70,9 @@ public class A6WorldController {
     }
 
     private void regenerateTileMap() {
-        if (worldcontainer.getChildren().contains(tileMap)) {
-            worldcontainer.getChildren().remove(tileMap);
-        }
-        tileMap = getWorldAnchorPane();
+        worldcontainer.getChildren().removeIf(child -> AnchorPane.class.isInstance(child));
+        AnchorPane newTileMap = worldAnchorPane.createWorldAnchorPane();
         hexHashMap = worldAnchorPane.getHexHashMap();
-        worldcontainer.getChildren().add(tileMap);
+        worldcontainer.getChildren().add(newTileMap);
     }
-
-    private AnchorPane getWorldAnchorPane() {
-        return worldAnchorPane.createWorldAnchorPane();
-    }
-
 }
