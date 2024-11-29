@@ -6,18 +6,22 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+// Create a PriorityBlockingQueue
 
-public class MainApp extends Application { 
+public class MainApp extends Application {
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("a6world.fxml"));
-        
+
         Scene scene = new Scene(root, 1200, 800);
-    
+
         stage.setTitle("A6 World View");
-        
+        // System.out.println("Thread in start: " + Thread.currentThread().getName());
 
         stage.setScene(scene);
         stage.show();
+
     }
+
 }
