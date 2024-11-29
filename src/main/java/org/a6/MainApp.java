@@ -6,8 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-// Create a PriorityBlockingQueue
-
 public class MainApp extends Application {
 
     @Override
@@ -18,7 +16,6 @@ public class MainApp extends Application {
 
         stage.setTitle("A6 World View");
         // System.out.println("Thread in start: " + Thread.currentThread().getName());
-
         stage.setScene(scene);
         stage.show();
 
