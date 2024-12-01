@@ -176,7 +176,7 @@ public class A6WorldController {
 
     private void regenerateTileMap() {
         worldcontainer.getChildren().removeIf(child -> AnchorPane.class.isInstance(child));
-        AnchorPane newTileMap = worldAnchorPane.createWorldAnchorPane(4, 7);
+        AnchorPane newTileMap = worldAnchorPane.createWorldAnchorPane(3, 5);
         hexHashMap = worldAnchorPane.getHexHashMap();
         worldcontainer.getChildren().add(newTileMap);
     }
